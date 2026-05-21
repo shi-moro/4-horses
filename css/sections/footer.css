@@ -1,0 +1,18 @@
+
+.footer {
+    padding: 72px;
+    padding-top: 40px;
+    background-color: var(--color-tretiary);
+}
+
+.footer_text {
+    font-size: 16px;
+    opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+
+    .footer {
+        padding: 40px 0 60px;
+    }
+}

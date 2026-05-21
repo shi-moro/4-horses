@@ -1,0 +1,128 @@
+@import './base/variables.css';
+@import './base/globals.css';
+
+@import './components/ticker.css';
+@import './components/slider.css';
+
+@import './sections/header.css';
+@import './sections/info.css';
+@import './sections/stages.css';
+@import './sections/participants.css';
+@import './sections/footer.css';
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    font-family: 'Golos Text';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: 'Golos Text';
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.main {
+    margin-top: 80px;
+    margin-bottom: 140px;
+    row-gap: 200px;
+}
+
+.main__section {
+    width: 100%;
+    grid-column: span 12;
+    row-gap: var(--section-gap, 54px);
+}
+
+.main__title {
+    font-family: 'Merriweather';
+    font-size: 54px;
+    font-weight: 400;
+    grid-column: span 8;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.main__title--small {
+    max-width: 764px;
+    font-size: 36px;
+    line-height: 135%;
+}
+
+.additional {
+    display: inline-block;
+    font-family: 'Golos Text';
+    font-size: 20px;
+    color: var(--color-blue);
+    text-transform: none;
+}
+  
+@media (max-width: 1199px) {
+
+    .main__title {
+        font-size: 36px;
+        grid-column: span 7;
+    }
+
+    .main__title--small {
+        font-size: 28px;
+    }
+
+    .additional {
+        font-size: 18px;
+    }
+}
+  
+@media (max-width: 991px) {
+
+    .main {
+        margin-top: 48px;
+        margin-bottom: 100px;
+        row-gap: 120px;
+    }
+
+    .main__section {
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        row-gap: var(--mobile-section-gap, 40px);
+    }
+
+    .main__title {
+        grid-column: span 12;
+        line-height: 110%;
+    }
+
+    .main__title--small {
+        line-height: 135%;
+    }
+
+    .additional {
+        line-height: 120%;
+    }
+}

@@ -1,0 +1,113 @@
+.participants {
+    position: relative;
+}
+
+.participants__nav {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    gap: 14px;
+}
+
+.participants__pages {
+    font-size: 16px;
+}
+
+.pages__current, .pages__all {
+    display: inline;
+}
+
+.pages__all {
+    opacity: 0.6;
+}
+
+.participants__slider {
+    grid-column: span 12;
+}
+
+.participants__list {
+    margin: 6px 0 0;
+    display: flex;
+
+    gap: 20px;
+}
+
+.participants__item {
+    width: calc((100% - 40px) / 3);
+    grid-column: span 4;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.participants__photo {
+    width: 100%;
+    min-width: 244px;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    border-radius: 100%;
+    background: url('../../assets/textures/texture_stamp.webp') center / auto no-repeat, var(--color-dark-gray);
+    position: relative;
+}
+
+.participants__photo::before {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+    background: url('../../assets/common/participant_placeholder.webp') bottom / 92% no-repeat;
+    position: absolute;
+}
+
+.participants__name {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+    margin-top: 28px;
+}
+
+.participants__rank {
+    margin-top: 6px;
+}
+
+.participants__button {
+    margin-top: 20px;
+    padding: 6px 12px;
+    border: 1px solid var(--color-blue);
+    border-radius: 62px;
+    color: var(--color-blue);
+    background-color: transparent;
+}
+
+.participants__button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-blue);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .participants__item {
+        width: calc((100% - 40px) / 2);
+    }
+}
+  
+@media (max-width: 767px) {
+
+    .participants__nav {
+        position: static;
+        margin: 0 auto;
+        order: 3;
+    }
+
+    .participants__item {
+        width: 100%;
+    }
+
+    .participants__photo {
+        max-width: 244px;
+    }
+}

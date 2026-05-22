@@ -9,6 +9,7 @@
 
 .slider__wrapper--visible {
     overflow: visible;
+    position: relative;
 }
 
 .slider__track {
